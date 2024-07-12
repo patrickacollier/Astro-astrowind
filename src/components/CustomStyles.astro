@@ -1,22 +1,7 @@
 ---
 import '@fontsource-variable/inter';
 
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
+// (Previous font comments remain unchanged)
 ---
 
 <style is:inline>
@@ -25,39 +10,54 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'InterVariable';
     --aw-font-heading: 'InterVariable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Main colors */
+    --aw-color-primary: #3498db;    /* Soft blue - inviting and calm */
+    --aw-color-secondary: #2ecc71;  /* Fresh green - lively and positive */
+    --aw-color-accent: #e74c3c;     /* Soft red - for attention, used sparingly */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    /* Text colors */
+    --aw-color-text-heading: #2c3e50;  /* Dark blue-gray - clear and authoritative */
+    --aw-color-text-default: #34495e;  /* Slightly lighter blue-gray - easy to read */
+    --aw-color-text-muted: #7f8c8d;    /* Muted gray - for less important text */
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    /* Background colors */
+    --aw-color-bg-page: #ecf0f1;       /* Very light gray with a hint of blue - easy on the eyes */
+    --aw-color-bg-subtle: #f9f9f9;     /* Almost white - for subtle contrast */
+
+    /* UI element colors */
+    --aw-color-border-light: #bdc3c7;   /* Light gray - for subtle borders */
+    --aw-color-focus-ring: #3498db;     /* Same as primary - for consistency */
+    --aw-color-focus-ring-offset: #d5e9f6;  /* Lighter version of primary */
+    --aw-color-btn-hover: #d5e9f6;      /* Light blue - subtle hover effect */
+    --aw-color-btn-hover-border: #3498db;  /* Primary color - for clear button borders on hover */
+    --aw-color-btn-hover-dark: #2980b9;  /* Darker blue - for dark mode hover */
+    --aw-color-text-hover: #2c3e50;     /* Same as heading color - for consistency */
+
+    /* Header colors */
+    --aw-color-header-scroll: rgba(236, 240, 241, 0.9);  /* Subtle transparent version of bg-page */
+    --aw-color-header-scroll-dark: rgba(44, 62, 80, 0.9);  /* Dark blue-gray for dark mode */
+    --aw-color-header-border-dark: rgba(127, 140, 141, 0.2);  /* Subtle border for dark mode */
+
+    /* Callout colors */
+    --aw-color-callout-bg: #eff6ff;     /* Light blue background for callouts */
+    --aw-color-callout-bgDark: #1e293b;  /* Subtle dark mode callout background */
 
     ::selection {
-      background-color: lavender;
+      background-color: var(--aw-color-accent);
+      color: white;
     }
   }
 
   .dark {
-    --aw-font-sans: 'InterVariable';
-    --aw-font-serif: 'InterVariable';
-    --aw-font-heading: 'InterVariable';
-
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
-
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: #ecf0f1;  /* Light gray - clear against dark background */
+    --aw-color-text-default: #bdc3c7;  /* Lighter gray - easy to read on dark background */
+    --aw-color-text-muted: #95a5a6;    /* Muted gray - for less important text in dark mode */
+    --aw-color-bg-page: #2c3e50;       /* Dark blue-gray - easy on the eyes in dark environments */
+    --aw-color-bg-subtle: #34495e;     /* Slightly lighter blue-gray - for subtle contrast in dark mode */
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: var(--aw-color-accent);
+      color: var(--aw-color-bg-page);
     }
   }
 </style>

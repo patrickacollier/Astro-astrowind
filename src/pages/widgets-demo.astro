@@ -1,0 +1,354 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import Note from '~/components/widgets/Note.astro';
+import Booking from '~/components/widgets/Booking.astro';
+
+const metadata = {
+  title: 'Widgets Demo',
+};
+---
+
+<Layout metadata={metadata}>
+  <Announcement />
+
+  <Hero
+    title="Hero Widget (Hero.astro)"
+    subtitle="This is a demo of the Hero widget"
+  />
+
+  <Hero2
+    tagline="Hero2 Widget (Hero2.astro)"
+    title="Long-form Sales: Sell with a Story: The Long-form Way!"
+    subtitle="Dive deep into crafting a Landing Page that narrates, persuades, and converts."
+    actions={[
+      { variant: 'primary', text: 'Call to Action', href: '#', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Learn more', href: '#' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1621452773781-0f992fd1f5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1626&q=80',
+      alt: 'Children telling a story. Long-form Sales Landing Page demo',
+    }}
+  />
+
+  <HeroText
+    title="HeroText Widget (HeroText.astro)"
+    subtitle="This is a demo of the HeroText widget"
+  />
+
+  <Features
+    id="features"
+    title="Features Widget (Features.astro)"
+    subtitle="Permalink here with #features"
+    columns={2}
+    items={[
+      {
+        title: 'Integration of Astro 4.0 and Tailwind CSS',
+        description:
+          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+        icon: 'tabler:layers-union',
+      },
+      {
+        title: 'Versatile design for startups, small businesses, and more',
+        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Effortless customization for portfolios and marketing sites',
+        description:
+          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Optimized landing pages and engaging blogs',
+        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        icon: 'tabler:podium',
+      },
+      {
+        title: 'Fast loading times and production-ready code',
+        description: `Using Astro 4.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'SEO-optimized structure for enhanced visibility',
+        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        icon: 'tabler:eyeglass',
+      },
+    ]}
+    />  
+
+  <Features2
+  title="Technical Support"
+  tagline="Features2 Widget (Features2.astro)"
+  columns={2}
+  items={[
+    {
+      title: 'Chat with us',
+      description:
+        'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+      icon: 'tabler:messages',
+    },
+    {
+      title: 'Call us',
+      description:
+        'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+      icon: 'tabler:headset',
+    },
+  ]}
+/>  
+
+  <Features3
+  title="Features3 Widget (Features3.astro)"
+  subtitle="Discover the advantages of choosing our plans"
+  columns={2}
+  items={[
+    {
+      title: 'Tiered Pricing Plans',
+      description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
+      icon: 'tabler:stairs',
+    },
+    {
+      title: 'Transparent Pricing',
+      description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+      icon: 'tabler:flip-vertical',
+    },
+    {
+      title: 'Secure Payment Methods',
+      description: 'Secure payment gateways to protect your financial information during transactions.',
+      icon: 'tabler:shield-lock',
+    },
+    {
+      title: 'Instant Access',
+      description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+      icon: 'tabler:accessible',
+    },
+    {
+      title: 'Upgrade Value',
+      description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+      icon: 'tabler:chevrons-up',
+    },
+    {
+      title: '24H support',
+      description: 'Questions answered via live chat, email or phone, every calendar day.',
+      icon: 'tabler:headset',
+    },
+  ]}
+  classes={{ container: 'max-w-5xl' }}
+    />  
+
+  <Steps
+  title="Steps Widget (Steps.astro)"
+  tagline="simplified process"
+  isReversed={true}
+  items={[
+    {
+      title: 'Explore plans',
+      icon: 'tabler:number-1',
+    },
+    {
+      title: 'Select a plan',
+      icon: 'tabler:number-2',
+    },
+    {
+      title: 'Sign Up / Log In',
+      icon: 'tabler:number-3',
+    },
+    {
+      title: 'Review order',
+      icon: 'tabler:number-4',
+    },
+    {
+      title: 'Enter payment details',
+      icon: 'tabler:number-5',
+    },
+    {
+      title: 'Confirmation',
+      icon: 'tabler:number-6',
+    },
+    {
+      title: 'Download and start using the template(s)',
+      icon: 'tabler:number-7',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+    alt: 'Steps image',
+  }}
+/>  
+
+  <Steps2
+  title="Steps2 Widget (Steps2.astro)"
+  subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+  items={[
+    {
+      title: 'Customer-centric approach',
+      description:
+        'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+    },
+    {
+      title: 'Constant Improvement',
+      description:
+        'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+    },
+    {
+      title: 'Ethical Practices',
+      description:
+        'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+    },
+  ]}
+/>  
+<!-- /content block with heading, reversed -->
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'High-Quality Designs',
+      description:
+        'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
+      icon: 'tabler:wand',
+    },
+    {
+      title: 'Customization Tools',
+      description:
+        'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Pre-Designed Elements',
+      description:
+        'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
+      icon: 'tabler:presentation',
+    },
+    {
+      title: 'Preview and Mockup Views',
+      description:
+        'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
+      icon: 'tabler:carousel-horizontal',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+    alt: 'Features Image',
+  }}
+/>
+<Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Content Widget (Content.astro)</h3>
+  </Fragment>
+
+<!-- END /content block with heading, reversed -->
+
+<!-- blog must be enabled in config.yaml
+  blog:
+    isEnabled: true
+ -->
+  <BlogLatestPosts title="Latest Blog Posts (BlogLatestPosts.astro)" />
+
+  <BlogHighlightedPosts title="Highlighted Blog Posts (BlogHighlightedPosts.astro)" />
+
+
+    <!-- FAQs Widget ******************* -->
+
+    <FAQs
+      title="FAQs Widget (FAQs.astro)"
+      items={[
+        {
+          title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+          description:
+            'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+          icon: 'tabler:chevrons-right',
+        },
+        {
+          title: 'Can I use AstroWind for both personal and commercial projects?',
+          description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+          icon: 'tabler:chevrons-right',
+        },
+        {
+          title: 'What level of coding knowledge is required to use AstroWind?',
+          description:
+            'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+          icon: 'tabler:chevrons-right',
+        },
+        {
+          title: 'Is customer support available for AstroWind users seeking guidance?',
+          description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+          icon: 'tabler:chevrons-right',
+        },
+      ]}
+    />
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-callout-bg dark:bg-callout-bgDark"></div>
+      </Fragment>
+
+  <Stats
+    title="Stats Widget (Stats.astro)"
+    stats={[
+      { title: 'Statistic 1', amount: '1000+' },
+      { title: 'Statistic 2', amount: '500+' },
+      { title: 'Statistic 3', amount: '100+' },
+    ]}
+  />
+
+  <CallToAction
+    title="Call to Action Widget (CallToAction.astro)"
+    subtitle="This is a demo of the Call to Action widget"
+    actions={[{ text: 'Get Started', href: '#' }]}
+  />
+
+  <Testimonials
+    title="Testimonials Widget (Testimonials.astro)"
+    testimonials={[
+      { name: 'Client 1', testimonial: 'Great service!' },
+      { name: 'Client 2', testimonial: 'Excellent product!' },
+      { name: 'Client 3', testimonial: 'Highly recommended!' },
+    ]}
+  />
+
+  <Brands
+    title="Brands Widget (Brands.astro)"
+    subtitle="These are some of our partners"
+    brands={[
+      { name: 'Brand 1', icon: 'tabler:brand-twitter' },
+      { name: 'Brand 2', icon: 'tabler:brand-facebook' },
+      { name: 'Brand 3', icon: 'tabler:brand-instagram' },
+    ]}
+  />
+
+  <Pricing
+    title="Pricing Widget (Pricing.astro)"
+    subtitle="Choose the plan that suits you best"
+    prices={[
+      { name: 'Basic', price: '$9.99/mo', features: ['Feature 1', 'Feature 2'] },
+      { name: 'Pro', price: '$19.99/mo', features: ['Feature 1', 'Feature 2', 'Feature 3'] },
+      { name: 'Enterprise', price: '$29.99/mo', features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'] },
+    ]}
+  />
+
+  <Contact
+    title="Contact Widget (Contact.astro)"
+    subtitle="Get in touch with us"
+  />
+
+  <Note>
+    This is a Note widget (Note.astro). It can be used to display important information or announcements.
+  </Note>
+
+  <Booking />
+</Layout>
